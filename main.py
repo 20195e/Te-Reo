@@ -7,10 +7,16 @@ if question == "yes":
 
 question1 = input("1. What does Pero mean in english? A. Dog? B. Sparrow? C. Lizard? ").lower()
 
-if question1 == "A" or "Dog":
+if question1 == "A":
   score += 1
   print("Correct.")
   print("Score:", score)
+
+elif question1 == "Dog":
+  score += 1
+  print("Correct.")
+  print("Score:", score)
+  
  
 else:
   print("Incorrect.")
