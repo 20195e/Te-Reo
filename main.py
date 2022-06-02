@@ -1,3 +1,21 @@
+#This is a quiz made to test basic Te Reo knowledge
+#The final_score fuction makes it so that depending on the score the user will get different responses 
+def final_score():
+  global score
+  
+
+  if score == 0:
+    print("You have scored 0 points and thus have failed!")
+  #elif 5 < score > 0:
+  elif score > 5 or score < 5: 
+    score = str(score)
+    print("The quiz is over you have scored "+ score +" points, Congratulations!")
+    score = str(score)
+  elif score == 5:
+    score = str(score)
+    print("The quiz is over you have scored "+ score +" points, Congratulations! A perfect score!")
+  
+    
 def question1():
   global score
   print("This is question One")
@@ -87,17 +105,18 @@ def question5():
   if ans5 == "false":
     print("Correct")
     score += 1
-    print("Score:",score)
-    print("The quiz is over you have scored",score)
-    print("points, Congratulations!")
-
+    final_score()
+    
   elif ans5 == "true":
     print("Incorrect")
-
+    final_score()
   else:
     print("Please choose True or False")
     question5()
+    
 
+  
+  
 score = 0
 print("This is a quiz meant to test your basic knowledge of Te Reo")
 print("\n")
