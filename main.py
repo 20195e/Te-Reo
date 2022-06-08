@@ -1,12 +1,13 @@
+#Te Reo Quiz - Vincent Beet
 #This is a quiz made to test basic Te Reo knowledge
 #The final_score fuction makes it so that depending on the score the user will get different responses 
 def final_score():
+#global allows the variable to affect the entire code instead of just outside of the fuctions due to the definition of score being outside the fuctions.
   global score
   
 
   if score == 0:
     print("You have scored 0 points and thus have failed!")
-  #elif 5 < score > 0:
   elif score > 5 or score < 5: 
     score = str(score)
     print("The quiz is over you have scored "+ score +" points, Congratulations!")
@@ -29,7 +30,7 @@ def question1():
 
 
   elif ans1 == "true":
-    print("Incorrect")
+    print("Incorrect, Pero means dog!")
     question2()
 
   else:
@@ -49,7 +50,7 @@ def question2():
     question3()
 
   elif ans2 == "true":
-    print("Incorrect")
+    print("Incorrect, Moana means ocean!")
     question3()
 
   else:
@@ -69,7 +70,7 @@ def question3():
     question4()
 
   elif ans3 == "false":
-    print("Incorrect")
+    print("Incorrect, Mane does mean Monday!")
     question4()
 
   else:
@@ -80,7 +81,7 @@ def question3():
 def question4():
   global score
   print("This is question Four")
-  ans4 = input("heihei means a group of two kids in English! True or False?").lower()
+  ans4 = input("Heihei means a group of two kids in English! True or False?").lower()
 
   if ans4 == "false":
     print("Correct")
@@ -89,7 +90,7 @@ def question4():
     question5()
 
   elif ans4 == "true":
-    print("Incorrect")
+    print("Incorrect, Heihei means Chicken!")
     question5()
 
   else:
@@ -100,7 +101,7 @@ def question4():
 def question5():
   global score
   print("This is question Five")
-  ans5 = input("Iwa means 6 in English! True or False?").lower()
+  ans5 = input("Iwa means six in English! True or False?").lower()
 
   if ans5 == "false":
     print("Correct")
@@ -108,7 +109,7 @@ def question5():
     final_score()
     
   elif ans5 == "true":
-    print("Incorrect")
+    print("Incorrect, Iwa means nine!")
     final_score()
   else:
     print("Please choose True or False")
@@ -116,8 +117,10 @@ def question5():
     
 
   
-  
+
+#This is the main compent of the score system allowing the code to tally amount of correct and incorrect answers
 score = 0
 print("This is a quiz meant to test your basic knowledge of Te Reo")
 print("\n")
+#This prints the fuction 
 question1()
